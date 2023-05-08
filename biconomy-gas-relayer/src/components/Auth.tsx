@@ -34,3 +34,16 @@ const tokens = [
     }
   ]
   
+export default function Auth() {
+        const [smartAccount, setSmartAccount] = useState<SmartAccount | null>(null)
+        const [interval, enableInterval] = useState<boolean>(false)
+        const sdkRef = useRef<SocialLogin | null>(null)
+        const [loading, setLoading] = useState<boolean>(false)
+      
+        // Forwarder config
+        const [amount, setAmount] = useState<string>('')
+        const [balances, setBalances] = useState<IBalances[]>([])
+        const [gasToken, setGasToken] = useState<IBalances | null>()
+        const [recipientAddress, setRecipientAddress] = useState<string>('')
+        const [selectedToken, setSelectedToken] = useState(tokens[0])
+}
